@@ -261,5 +261,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jumping = false;
             }
         }
+        	void OnTriggerEnter(Collider other) 
+	{
+		// ..and if the GameObject you intersect has the tag 'Pick Up' assigned to it..
+		if (other.gameObject.CompareTag ("PickUp"))
+		{
+			other.gameObject.SetActive (false);
+
+		}
+	}
     }
 }
