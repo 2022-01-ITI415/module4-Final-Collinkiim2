@@ -42,10 +42,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-        private int count;
-        public GameObject winTextObject;
-        private Rigidbody rb;
-        public TextMeshProUGUI countText;
+
         
 
         // Use this for initialization
@@ -262,44 +259,5 @@ namespace UnityStandardAssets.Characters.FirstPerson
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
 
-	void CountScore ()
-	{
-		// Assign the Rigidbody component to our private rb variable
-		rb = GetComponent<Rigidbody>();
-
-		// Set the count to zero 
-		count = 0;
-
-		SetCountText ();
-
-                // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
-                winTextObject.SetActive(false);
-	}
-
-            void SetCountText()
-	{
-		countText.text = "Count: " + count.ToString();
-
-		if (count >= 8) 
-		{
-                    // Set the text value of your 'winText'
-                    winTextObject.SetActive(true);
-		}
-	}
-
-    	void OnTriggerEnter(Collider other) 
-	{
-		// ..and if the GameObject you intersect has the tag 'Pick Up' assigned to it..
-		if (other.gameObject.CompareTag ("PickUp"))
-		{
-			other.gameObject.SetActive (false);
-
-			// Add one to the score variable 'count'
-			count = count + 1;
-
-			// Run the 'SetCountText()' function (see below)
-			SetCountText ();
-		}
-	}
     }
 }

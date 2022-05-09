@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4869078785727343663}
   - component: {fileID: 4342703531559917472}
   - component: {fileID: 2575540276483564080}
+  - component: {fileID: -2133199135469162760}
   m_Layer: 0
   m_Name: Trail
   m_TagString: PickUp
@@ -92,7 +93,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7810873255911085121}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -123,5 +124,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ee611f76152e743b6a843a32dc8611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2133199135469162760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810873255911085121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02dd346b33340f94a8e281ba288904f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
